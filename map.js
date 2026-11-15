@@ -12,6 +12,8 @@ const map = new mapboxgl.Map({
   maxZoom: 18,
 });
 
+new ResizeObserver(() => map.resize()).observe(map.getContainer());
+
 const bikeLaneStyle = {
   'line-color': '#32D400',
   'line-width': 4,
